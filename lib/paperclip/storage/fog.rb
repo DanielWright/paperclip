@@ -45,7 +45,7 @@ module Paperclip
         rescue LoadError => e
           e.message << " (You may need to install the fog gem)"
           raise e
-        end unless defined?(Fog)
+        end unless defined?(::Fog)
 
         base.instance_eval do
           unless @options[:url].to_s.match(/\A:fog.*url\Z/)
